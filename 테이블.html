@@ -4,14 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    table{
+      border-collapse: collapse ;
+    }
+    th, td{
+      border: 1px solid #ccc;
+      padding: auto;
+    }
+    th{
+      background-color: rgb(70, 255, 169);
+    }
+  </style>
 </head>
 <body>
   <!-- 표(table)은 행과 열로 이루어짐 -->
   <table>
-    <tr></tr>
+    <tr>
+      <th> 제목</th>
+      <th>번호</th>
+      <th>이름</th>
+      <th>급여</th>
+      </tr>
+      <tr>
+        <td>9000</td>
+        <td>가나다</td>
+        <td>4500</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>라마바</td>
+        <td>80</td>
+        <td rowspan="2">710</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>라마바</td>
+        <td>80</td>
+      </tr></body>
+      <tr><footer>
+        <td>총 금액</td>
+        <td colspan="3">6500원
+        </td></footer>
+      </tr>
   </table>
 
-
-
-</body>
 </html>

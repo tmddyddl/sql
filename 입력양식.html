@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <!-- 라디오 타입: 여러항목중하나만 선택 하도록 함 -->
+ <!-- value실제로넘어가는값 -->
+  <label for="male">남성</label>
+  <input type="radio" name="gender" id="male" value="남자">
+  <label for="female">여성</label>
+  <input type="radio" name="gender" id="female"value="여자">
+ <hr />
+
+<label for="apple">사과</label>
+<input type="radio" name="fruits" id="apple" value="apple">
+<label for="banana">바나나</label>
+<input type="radio" name="fruits" id="banana" value="banana">
+<label for="mango">망고</label>
+<input type="radio" name="fruits" id="mango" value="mango">
+<hr>
+<label for="user-id">아이디6자리이상</label>
+<input type="text" id="user-id" placeholder="6자리 이상">
+<hr>
+<!-- filedset 태그로 그룹을 만들면 그룹별로 박스 모양의 테두리가 생김 -->
+<form action="#">
+<fieldset>
+  <legend>기본정보</legend>
+  <div>
+    <label for="userid">id</label>
+    <input type="text" id="userid">
+  </div>
+  <div>
+    <label for="password">비밀번호</label>
+    <input type="password" id="password">
+  </div>
+</fieldset>
+<fieldset>
+  <legend>선택 정보</legend>
+  <div>
+    <label for="age">age</label>
+    <input type="number" id="age" placeholder="only number">
+  </div>
+  <div>
+    <label for="recom">추천인</label>
+    <input type="text" id="recom" placeholder="없으면 생략">
+  </div>
+</fieldset>
+</form>
+
+</body>
+</html>

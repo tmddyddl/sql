@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 800px;
+      margin: 0 auto;
+
+    }
+    label{
+      width: 120px;
+      display: inline-block;
+     
+    }
+    button{
+      width: 150px;
+     height: 40px;
+    }
+    .bt{
+     margin-top: 20px;
+     display: flex;
+     justify-content: center;
+    }
+    input{
+      width: 300px;
+      height: 24px;
+      margin-bottom:  10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>아이패드 주문하기</h1>
+  <form action="#">
+  <fieldset>
+    <legend>배송 정보</legend>
+<label for="ipad">주문 상품</label>
+ <input type="text" id="ipad" value="12.9" readonly><br>
+<label for="name">이름</label>
+<input type="text"  id="name"><br>
+<label for="adr">배송 주소</label>
+<input type="text"id="adr"><br>
+<label for="email">이메일</label>
+<input type="text" id="email"><br>
+<label for="ph">연락처</label>
+<input type="text"  id="ph" placeholder="하이픈빼고 입력해주셈"><br>
+<label for="date">베송 지정</label>
+<input type="date" name="" id="date"><span>(주문일로부터 최소 3일 이후)</span>
+  </fieldset>
+ 
+    <div class="bt">
+    <button type="submit">주문하기</button> 
+    <button type="reset">취소하기</button>
+</div>
+  </form></div>
+</body>
+</html>

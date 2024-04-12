@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      color: red;
+     
+    }
+    /* 태그선택자:태그명으로 선택자르 ㄹ지정하는 방법 */
+    div{
+      width: 200px;
+      height: 200px;
+      
+      color: white;
+    }
+    .accent{ 
+border: 1px solid #000;
+padding: 5px;
+    }
+    .bg{
+      background-color: #ddd;
+    }
+    /* 아이디 선택자(#): 문서에서 한번만 적용가능 리액트에서는 사용x */
+    #container{
+      width: 500px;
+    
+      margin: 10px auto;
+      padding: 10px;
+      border :1px solid #000;
+    }
+    /* 기본속성 선택자: 속성과 값을 사용해 선택자를 지정하는 방법 */
+    #container a[ target="_blank"] {
+      color: red;
+    }
+    /* 여러선택자를 하나로 그룹지을때사용 */
+  </style>
+</head>
+<body>
+  <div id="container">
+  <p>qwerqwerqwer</p>
+  <div>곰돌이 사육사</div>
+  <h1 class="accent bg">red</h1>
+  <p>껍질이 붉으 ㄴ빛이 돌아<span class="accent">레드향</span>이라불림</p>
+<a href="http://naver.com" target="_blank">네이버</a>
+<a href="http://naver.com" target="_blank">네이버</a>
+
+</div>
+<a href="http://naver.com">네이버</a>
+</body>
+</html>

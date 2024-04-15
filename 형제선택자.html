@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head> <style>
+   h1~h2{
+    color:red;
+  }
+  h1::before {
+			content: "★";
+			color: red;
+  }
+  a:link{
+    color:orange
+  }
+  a:visited{
+    color: green;
+  }
+  button:hover{
+    color: green;
+  }
+  button:active{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: all 1s ease-in;
+  }
+  input:focus{
+    color: white;
+    background-color: red;
+  }
+  input:disabled{
+    background-color: black;
+  }
+ </style>
+<body>
+  <!-- 인접 형제 선택자 : +기호를 사용하여 인접한 형제 요소 선택 -->
+  <!-- 일반 형제 선택자: ~ -->
+  <!-- 동적 가상 클래스 선택자: :hover(마우스올렸을때), :active(마우스클릭) -->
+  <!-- 입력요소 가상 선택자 :  -->
+<h1>test 1</h1>
+<a href="https://www.naver.con">naver</a>
+<a href="http://ww.google.co.kr">google</a>
+<button>asdf</button>
+<label for="in">input</label>
+<label for="in2">disable</label>
+<input type="text" id="in2" disabled>
+</body>
+</html>

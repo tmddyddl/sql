@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head><style>
+  li:first-child{
+    color: red;
+  }
+  li:last-child{
+    color: yellowgreen;
+  }
+  p:nth-child(1) {
+  color: darkblue;
+  font-weight: bold;
+}
+</style>
+<body>
+  <!-- 구조적 가상 선택자: 요소의 구조와 위치에 따라 스타일을 적용 -->
+<!-- nth-child(n):요소가 부모의 모든 자식 요소중 n 번째 자식요소가 맞ㅇ면 선택 -->
+ 
+  <p>p tag 1</p>
+  <div>
+    <p>div p 1</p>
+  <p>div p 2</p>
+</div>
+<div>
+  <p>div p 3</p>
+  <p>div p 4
+  </p>
+</div> <ul>
+<li>test1</li>
+<li>test2</li>
+<li>test3</li>
+<li>test4</li>
+  </ul>
+</body>
+</html>

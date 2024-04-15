@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <link rel="stylesheet" href="./css/연습장.css">
+    <style>
+      body{
+        background-color: white;
+      }
+      button:active{
+        border-radius: 25%;
+      }
+      p{
+        
+      }
+       .focus-in-expand {
+          -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                  animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }@-webkit-keyframes focus-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes focus-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      
+    </style>
+    <body>
+        <button class="box"></button>
+       <div class="focus-in-expand">asdfasdf</div>
+       
+    </body>
+</html>

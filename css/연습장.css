@@ -1,0 +1,9 @@
+.box{
+  width: 100px;
+  height: 100px;
+   background: radial-gradient(circle, rgb(255, 255, 255),aqua);
+   border-radius: 50%;
+   transition-duration:0.5s;
+   transition-delay:0.3s;
+   
+}

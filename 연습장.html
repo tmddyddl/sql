@@ -1,53 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <link rel="stylesheet" href="./css/연습장.css">
-    <style>
-      body{
-        background-color: white;
-      }
-      button:active{
-        border-radius: 25%;
-      }
-      p{
-        
-      }
-       .focus-in-expand {
-          -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                  animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }@-webkit-keyframes focus-in-expand {
-        0% {
-          letter-spacing: -0.5em;
-          -webkit-filter: blur(12px);
-                  filter: blur(12px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-filter: blur(0px);
-                  filter: blur(0px);
-          opacity: 1;
-        }
-      }
-      @keyframes focus-in-expand {
-        0% {
-          letter-spacing: -0.5em;
-          -webkit-filter: blur(12px);
-                  filter: blur(12px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-filter: blur(0px);
-                  filter: blur(0px);
-          opacity: 1;
-        }
-      }
-      
-    </style>
-    <body>
-        <button class="box"></button>
-       <div class="focus-in-expand">asdfasdf</div>
-       
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      position: relative;
+      background-color: #B4FBFF;
+      font-size: 20px;
+      transition: background-color 2s linear; /* 배경색 전환을 선형으로 2초 동안 부드럽게 */
+    }
+    .container {
+      height: 4000px;
+    }
+    .gg {
+      border: 1px solid white;
+      background-color: #CBFF75;
+      width: 100px;
+      height: 50px;
+      position: fixed;
+      border-radius: 12%;
+      text-decoration: none;
+      text-align: center;
+      line-height: 50px;
+      opacity: 0.5;
+    }
+    .return {
+      width: 100px;
+      height: 50px;
+      background-color: black;
+      border: 1px solid white;
+      position: fixed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="gg"></button>
+    <br><br><br>
+    <button class="return"></button>
+  </div>
+
+  <script>
+    document.querySelector('.gg').addEventListener('click', function() {
+      document.body.style.backgroundColor = '#CBFF75';
+    });
+
+    document.querySelector('.return').addEventListener('click', function() {
+      document.body.style.backgroundColor = '#E8F5FF';
+    });
+  </script>
+</body>
 </html>

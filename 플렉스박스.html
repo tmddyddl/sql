@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>flex box</title>
+    <style>
+      .flex-container {
+    width: 300px;
+    height: 200px;
+    background-color:bisque;
+    border: 1px solid black;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex-item {
+    width: 80px;
+    height: 50px;
+    margin: 2px;
+    text-align: center;
+    border: 1px solid darkblue;
+    color: white;
+    background-color: orange;
+}
+.flex-item:nth-child(2n) {
+    background-color: orangered;
+
+}
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">item1</div>
+        <div class="flex-item">item2</div>
+        <div class="flex-item">item3</div>
+        <div class="flex-item">item4</div>
+        <div class="flex-item">item5</div>
+        <div class="flex-item">item6</div>
+        <div class="flex-item">item7</div>
+
+    </div>
+    
+</body>
+</html>

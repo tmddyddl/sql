@@ -1,9 +1,98 @@
-.box{
-  width: 100px;
-  height: 100px;
-   background: radial-gradient(circle, rgb(255, 255, 255),aqua);
-   border-radius: 50%;
-   transition-duration:0.5s;
-   transition-delay:0.3s;
-   
+.header {
+  position: fixed;
+  justify-content: flex;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  opacity: 0.8;
+  background-color: white;
+  line-height: 75px;
+  top: -0px;
+  z-index: 3;
+}
+
+.header h1 {
+  left: 50px;
+}
+
+a {
+  display: inline-block;
+  text-decoration-line: none;
+  color: #65FFBA;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+  color: #65FFBA;
+}
+
+a:active {
+  color: #6FFFC4;
+}
+
+.container {
+  display: 1000px;
+  height: 1000px;
+  justify-content: center;
+ 
+}
+
+.container .color {
+  text-align: center;
+  position: fixed;
+  font-size: 150px;
+  color: white;
+  text-align: center;
+  top: 38%;
+  left: 35%;
+  z-index: 11;
+}
+
+.box {
+  position: relative;
+  width: calc(25%); 
+  height: calc(25%);
+  display: inline-block;
+  z-index: 2;
+
+  cursor: pointer;transition: 0.5s ease-in;
+}
+.box:nth-child(odd) {
+  transform-origin: right center; 
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* 각 박스에 고유한 클래스 추가 */
+.box1 { background-color: #FFFF8C; }
+.box2 { background-color: #FFBDA3; }
+.box3 { background-color: #FFE3EE; }
+.box4 { background-color: #FFC3FA; }
+.box5 { background-color: #EBFFEB; }
+.box6 { background-color: #46FFFF; }
+.box7 { background-color: #D2E1FF; }
+.box8 { background-color: #3CB4FF; }
+.boxes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+}
+  .back1 {
+
+position: fixed;
+left: -1000px;
+top: 0;
+width: 1000px;
+height: 1000px;
+background-color:#FFFF8C ;
+transition: 0.5s 0.3s ease-in-out;
+z-index: 10;
+}
+ .box1:active ~.back1 {
+
+  transform: translateX(1000px);
 }

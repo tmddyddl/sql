@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      position: relative;
-      background-color: #B4FBFF;
-      font-size: 20px;
-      transition: background-color 2s linear; /* 배경색 전환을 선형으로 2초 동안 부드럽게 */
-    }
-    .container {
-      height: 4000px;
-    }
-    .gg {
-      border: 1px solid white;
-      background-color: #CBFF75;
-      width: 100px;
-      height: 50px;
-      position: fixed;
-      border-radius: 12%;
-      text-decoration: none;
-      text-align: center;
-      line-height: 50px;
-      opacity: 0.5;
-    }
-    .return {
-      width: 100px;
-      height: 50px;
-      background-color: black;
-      border: 1px solid white;
-      position: fixed;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/연습장.css">
+<title>Document</title>
+<style>
+* {
+  margin: 0;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <button class="gg"></button>
-    <br><br><br>
-    <button class="return"></button>
+<div class="container" id="container">
+  
+  <p class="color"><b>color</b></p>
+  <div class="header">
+    <h1><a href="http://127.0.0.1:5500/%EC%97%B0%EC%8A%B5%EC%9E%A5.html">
+      &nbsp;&nbsp;&nbsp; color</a></h1>
   </div>
+  <div class="boxes">
+    <div class="box box1"></div>
+    <div  class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
+    <div class="back1"></div>
+</div>
 
-  <script>
-    document.querySelector('.gg').addEventListener('click', function() {
-      document.body.style.backgroundColor = '#CBFF75';
-    });
-
-    document.querySelector('.return').addEventListener('click', function() {
-      document.body.style.backgroundColor = '#E8F5FF';
-    });
-  </script>
+<script>
+// function changeColor(clickedBox) {
+//   var boxColor = window.getComputedStyle(clickedBox).backgroundColor; // 클릭된 박스의 배경색 가져오기
+//   var boxes = document.querySelectorAll(".box"); // 모든 박스 가져오기
+//   boxes.forEach(function(box) {
+//     box.style.backgroundColor = boxColor; // 모든 박스의 배경색을 클릭된 박스의 색상으로 변경
+//   });
+// }
+</script>
 </body>
 </html>

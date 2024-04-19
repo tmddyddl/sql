@@ -13,32 +13,75 @@
 </head>
 <body>
 <div class="container" id="container">
-  
   <p class="color"><b>color</b></p>
   <div class="header">
     <h1><a href="http://127.0.0.1:5500/%EC%97%B0%EC%8A%B5%EC%9E%A5.html">
       &nbsp;&nbsp;&nbsp; color</a></h1>
   </div>
   <div class="boxes">
-    <div class="box box1"></div>
-    <div  class="box box2"></div>
-    <div class="box box3"></div>
-    <div class="box box4"></div>
-    <div class="box box5"></div>
-    <div class="box box6"></div>
-    <div class="box box7"></div>
-    <div class="box box8"></div>
-    <div class="back1"></div>
+    <div class="box box1"><p>FFFF8C</p></div>
+    <div class="box box2"><p>FFBDA3</p></div>
+    <div class="box box3"><p>FFE3EE</p></div>
+    <div class="box box4"><p>FFC3FA</p></div>
+    <div class="box box5"><p>EBFFEB</p></div>
+    <div class="box box6"><p>46FFFF</p></div>
+    <div class="box box7"><p>D2E1FF</p></div>
+    <div class="box box8"><p>3CB4FF</p></div>
+    <div class="box box9"><p></p></div>
+    <div class="box box10"><p></p></div>
+    <div class="box box11"><p></p></div>
+    <div class="box box12"><p></p></div>
+    <div class="box box13"><p></p></div>
+    <div class="box box14"><p></p></div>
+    <div class="box box15"><p></p></div>
+    <div class="box box16"><p></p></div>
+    <div class=" back1"></div>
+    <div class=" back2"></div>
+    <div class=" back3"></div>
+    <div class=" back4"></div>
+    <div class=" back5"></div>
+    <div class=" back6">46FFFF</div>
+    <div class=" back7"></div>
+    <div class=" back8"></div>
+    <div class="back9"></div>
+    <div class="back10"></div>
+    <div class="back11"></div>
+    <div class="back12"></div>
+    <div class="back13"></div>
+    <div class="back14"></div>
+    <div class="back15"></div>
+    <div class="back16"></div>
 </div>
-
 <script>
-// function changeColor(clickedBox) {
-//   var boxColor = window.getComputedStyle(clickedBox).backgroundColor; // 클릭된 박스의 배경색 가져오기
-//   var boxes = document.querySelectorAll(".box"); // 모든 박스 가져오기
-//   boxes.forEach(function(box) {
-//     box.style.backgroundColor = boxColor; // 모든 박스의 배경색을 클릭된 박스의 색상으로 변경
-//   });
-// }
+  document.addEventListener('DOMContentLoaded', function () {
+    const element = document.getback6tById('myback6');
+    let originalSize = null;
+    let isFull = false;
+
+    back6.addEventListener('mousedown', function (event) {
+        if (!isFull) {
+            originalSize = { width: back6.offsetWidth, height: back6.offsetHeight, x: back6.offsetLeft, y: back6.offsetTop };
+            back6.style.width = '100vw';
+            back6.style.height = '100vh';
+            back6.style.left = '0px';
+            back6.style.top = '0px';
+            isFull = true;
+        }
+    });
+
+    document.addEventListener('mouseup', function () {
+        if (isFull) {
+          back6.style.width = originalSize.width + 'px';
+          back6.style.height = originalSize.height + 'px';
+          back6.style.left = originalSize.x + 'px';
+          back6.style.top = originalSize.y + 'px';
+          back6.style.zIndex=10;
+            isFull = false;
+        }
+    });
+});
+
 </script>
+
 </body>
 </html>

@@ -1,20 +1,23 @@
+.body{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
 .header {
   position: fixed;
-  justify-content: flex;
   display: flex;
+  justify-content: center; 
+  align-items: center; 
   width: 100%;
   height: 80px;
   opacity: 0.8;
   background-color: white;
   line-height: 75px;
-  top: -0px;
+  top: 0; 
   z-index: 3;
+  user-select: none;
 }
-
-.header h1 {
-  left: 50px;
-}
-
 a {
   display: inline-block;
   text-decoration-line: none;
@@ -32,21 +35,23 @@ a:active {
 }
 
 .container {
-  display: 1000px;
-  height: 1000px;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
- 
+  position: relative;
 }
 
-.container .color {
+.color {
   text-align: center;
   position: fixed;
   font-size: 150px;
   color: white;
-  text-align: center;
-  top: 38%;
-  left: 35%;
-  z-index: 11;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  user-select: none;
+  pointer-events: none;
 }
 
 .box {
@@ -55,26 +60,42 @@ a:active {
   height: calc(25%);
   display: inline-block;
   z-index: 2;
+font-size: 50px;
+color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.box p{
 
-  cursor: pointer;transition: 0.5s ease-in;
+line-height: 50%;
+text-align: center;
+user-select: none;
+pointer-events: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 .box:nth-child(odd) {
   transform-origin: right center; 
 }
-
-.box:hover {
-  transform: scale(1.1);
-}
-
-/* 각 박스에 고유한 클래스 추가 */
 .box1 { background-color: #FFFF8C; }
 .box2 { background-color: #FFBDA3; }
 .box3 { background-color: #FFE3EE; }
 .box4 { background-color: #FFC3FA; }
 .box5 { background-color: #EBFFEB; }
-.box6 { background-color: #46FFFF; }
+.box6 {
+   background-color: #46FFFF; }
 .box7 { background-color: #D2E1FF; }
 .box8 { background-color: #3CB4FF; }
+.box9{ }
+.box10{ }
+.box11{ }
+.box12{ }
+.box13{ }
+.box14{ }
+.box15{ }
+.box16{ }
 .boxes {
   width: 100%;
   height: 100%;
@@ -82,17 +103,101 @@ a:active {
   flex-wrap: wrap; 
 }
   .back1 {
-
 position: fixed;
 left: -1000px;
-top: 0;
-width: 1000px;
-height: 1000px;
+top: -1000px;
+width: 100%;
+height: 100%;
 background-color:#FFFF8C ;
-transition: 0.5s 0.3s ease-in-out;
+transition: 0.6s 0.3s ease-in-out;
 z-index: 10;
 }
  .box1:active ~.back1 {
+  transform: translate(1000px, 1000px);
+}
+.back2{
+  
+  top:-1000px;
+  width: 100%;
+  height: 100%;
+background-color:#FFBDA3 ;
+transition: 0.6s 0.3s ease-in-out;
+z-index: 10;position: fixed;
+}
+.box2:active ~ .back2{
+  transform: translateY(1000px);
+}
+.back3{
+  width: 25%;
+  height: 100%;
+  left: 50%;
+background-color: #FFE3EE;
+position: absolute;
+transition: 0.6s 0.3s ease-in-out;
+}
+.box3:active~ .back3{
+  z-index: 10;
+  transform: scaleX(10);
+ 
+}
+.back4{
+left: 1000px;
+top:-1000px;
+width: 100%;
+height: 100%;
+background-color:#FFC3FA ;
+transition: 0.6s 0.3s ease-in-out;
+  z-index: 10;
+  position: fixed;
+}
+.box4:active ~ .back4{
+  transform: translate(-1000px, 1000px);
+}
+.back5{
+  transition: 0.6s 0.3s ease-in-out;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+transform: translate(-100%);
+background-color:#EBFFEB ;
+}
+.box5:active ~ .back5{
+  transform: translate(0);
+}
+.back6{
+  width: 25%;
+  height: 25%;
+  left: 25%;
+  top: 25%;
+  background-color:#46FFFF ;
+  position: absolute;
+  transition: 0.6s 0.3s ease-in-out;
+  font-size: 50px;
+  color: white;
+  z-index: 10;
+}
+.box6:active ~ .back6 {
+opacity: 1;
+transform: scale(10,10);
 
-  transform: translateX(1000px);
+}
+.back7 {
+  width: 0;
+  height: 0;
+  border: 500px solid transparent;
+  border-bottom-color: black;
+  position: relative;
+  top: -50px;
+
+}
+.back7:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top-color: black;
 }
